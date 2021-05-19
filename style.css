@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #c4c4c4;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+}
+
+.container .left {
+    width: 35%;
+    background: white;
+}
+
+.container .left .image {
+    width: 100%;
+}
+
+.container .left .image img {
+    width: 200px;
+    height: 200px;
+    padding-left: 40px;
+    padding-top: 40px;
+    border: black;
+    display: block;
+}
+
+.container .title {
+    color: rgb(44, 10, 10);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.container .left .info-text {
+    color: black;
+}
+
+.container .left .resume {
+    padding: 20px 30px;
+}
+
+.container .item {
+    padding: 20px 0;
+    border-bottom: 1px solid #0175b2;
+}
+
+.container .item:last-child {
+    border-bottom: 0;
+}
+
+.container .left .info {
+    display: none;
+}
+
+.container .info .name {
+    font-size: 20px;
+    color: rgb(21, 21, 26);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+.container .left .info .role {
+    color: #130950;
+    font-weight: 500;
+}
+
+.container .left .contact .info-text:last-child {
+    margin-top: 10px;
+}
+
+.container .left .contact .subtitle {
+    color: rgb(66, 3, 3);
+    margin-bottom: 2px;
+}
+
+.container .left .contact .icon i {
+    color: black;
+}
+
+.container .left .skills .skills_list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.container .right {
+    width: 65%;
+    padding: 20px 40px;
+    color: #26252d;
+}
+
+.container .right .info .name {
+    color: #26252d;
+    font-size: 32px;
+}
+
+.container .right .info .role {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.container .right .item .title {
+    color: #26252d;
+}
+
+.container .right .data {
+    display: flex;
+}
+
+.container .right .data .year {
+    padding-right: 35px;
+    width: 115px;
+    position: relative;
+}
+
+.container .right .data .content {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100% - 115px);
+}
+
+.container .right .data .year:before {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+
+.container .right .data .year:after {
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #0175b2;
+}
+
+.container .right .data:last-child .year:after {
+    display: none;
+}
+
+.container .right .data .text {
+    color: black;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 800px) {
+    .container .right .info {
+        display: none;
+    }
+    .container .left .info {
+        display: block;
+    }
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .container .left,
+    .container .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .container .right {
+        padding: 20px 30px;
+    }
+    .container .right .data {
+        flex-direction: column;
+    }
+    .container .right .data .year {
+        padding: 0;
+        margin-bottom: 5px;
+        width: 100%;
+        color: #0175b2;
+    }
+    .container .right .data .year:before,
+    .container .right .data .year:after {
+        display: none;
+    }
+}
